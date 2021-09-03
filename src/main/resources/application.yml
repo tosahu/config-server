@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+
+---
+
+spring:
+  profiles: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tosahu/ConfigData
+          default-label: main
+server:
+  port: 8001
+management:
+  security:
+    enables: false
+
+---
