@@ -6,6 +6,8 @@ spring:
 
 spring:
   profiles: dev
+  application:
+    name: CONFIG-SERVER
   cloud:
     config:
       server:
@@ -17,5 +19,10 @@ server:
 management:
   security:
     enables: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
 
 ---
